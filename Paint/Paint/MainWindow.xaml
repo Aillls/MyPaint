@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="820" Background="#FFB6B6B6">
     <Grid>
-        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="299" Width="496" Margin="0,45,0,0" VerticalAlignment="Top" />
-        <Button Content="Очистить"   HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
-        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save_Click"/>
+        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="300" Width="500" Margin="0,45,0,0" VerticalAlignment="Top" />
 
-        <Button x:Name="btn_Close" Content="Закрыть" HorizontalAlignment="Left" Margin="715,5,0,0" VerticalAlignment="Top" Width="75" Click="btn_Close_Click"/>
+        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save_Click" Background="White"/>
+        <Button x:Name="btn_Clear" Content="Очистить"   HorizontalAlignment="Left" Margin="705,45,0,0" VerticalAlignment="Top" Width="75" Click="btn_Clear_Click" Background="White"/>
+        <Button x:Name="btn_Select" Content="Выделить" HorizontalAlignment="Left" Margin="705,75,0,0" VerticalAlignment="Top" Width="75" Click="btn_Select_Click" Background="White"/>
+        <Button x:Name="btn_AddText" Content="Текст" HorizontalAlignment="Left" Margin="705,105,0,0" VerticalAlignment="Top" Width="75" Click="btn_AddText_Click" Background="White"/>
 
-        <Slider x:Name="sld_RedColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Width="26" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
+        <Slider x:Name="sld_RedColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
         <Slider x:Name="sld_GreenColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="60,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
         <Slider x:Name="sld_BlueColor"  Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="90,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
 
