@@ -68,7 +68,7 @@ namespace Paint
             this.inkCanvas1.DefaultDrawingAttributes.Color = clr;
         }
 
-        private void btn_Save_Click(object sender, RoutedEventArgs e)
+        private void menuSaveAs_Click(object sender, RoutedEventArgs e)
         {
             this.inkCanvas1.EditingMode = InkCanvasEditingMode.None;
             string imgPath = @"C:\Temp\file.gif"; //Куда сохраняется файл
@@ -87,17 +87,27 @@ namespace Paint
             MessageBox.Show("Файл сохранен, " + imgPath); //Для информации
         }
 
-        private void btn_Clear_Click(object sender, RoutedEventArgs e)
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void menuUndo_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void menuClear_Click(object sender, RoutedEventArgs e)
         {
             this.inkCanvas1.Strokes.Clear();
         }
 
-        private void btn_Select_Click(object sender, RoutedEventArgs e)
+        private void menuSelect_Click(object sender, RoutedEventArgs e)
         {
             this.inkCanvas1.EditingMode = InkCanvasEditingMode.Select;
         }
 
-        private void btn_AddText_Click(object sender, RoutedEventArgs e)
+        private void menuText_Click(object sender, RoutedEventArgs e)
         {
             //Инициализация контрола tb типа TextBox
             TextBox tb = new TextBox
@@ -112,6 +122,11 @@ namespace Paint
             this.inkCanvas1.Children.Add(tb);
             //Переключение фокуса на элемент, чтоб можно было сразу ввести текст с клавиатуры
             tb.Focus();
+        }
+
+        private void menuManual_Click(object sender, RoutedEventArgs e)
+        {
+            //
         }
     }
 }

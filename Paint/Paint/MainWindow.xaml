@@ -5,20 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Paint"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="820" Background="#FFB6B6B6">
-    <Grid>
-        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="300" Width="500" Margin="0,45,0,0" VerticalAlignment="Top" />
+        Title="Paint" Height="450" Width="800" Background="#FFB6B6B6">
+    <DockPanel>
+        <Menu x:Name="menu1" DockPanel.Dock="Top" Background="White">
+            <MenuItem Header="Файл">
+                <MenuItem x:Name="menuSaveAs" Header="Сохранить как" Click="menuSaveAs_Click"/>
+                <MenuItem x:Name="menuExit" Header="Выход" Click="MenuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Редактирование">
+                <MenuItem x:Name="menuUndo" Header="Назад" Click="menuUndo_Click"/>
+                <MenuItem x:Name="menuClear" Header="Очистить" Click="menuClear_Click"/>
+                <MenuItem x:Name="menuSelect" Header="Выделить" Click="menuSelect_Click"/>
+            </MenuItem>
+            <MenuItem Header="Помощь">
+                <MenuItem x:Name="menuManual"  Header="Справка" Click="menuManual_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Rectangle Fill="#FFC8C8C8" Width="36" Height="404" RadiusX="5" RadiusY="5" Margin="2,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Button x:Name="button_pen2" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\icons\pen-icon2.png" HorizontalAlignment="Left" />
+            </Button>
+            <Button x:Name="button_pen" HorizontalAlignment="Left" Margin="5,40,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\icons\pen-icon.png" HorizontalAlignment="Left" />
+            </Button>
+            <Button x:Name="button_eraser" HorizontalAlignment="Left" Margin="5,75,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\icons\eraser.png" HorizontalAlignment="Left" />
+            </Button>
+            <Button x:Name="button_dot" HorizontalAlignment="Left" Margin="5,110,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\icons\small.png" HorizontalAlignment="Left" />
+            </Button>
 
-        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save_Click" Background="White"/>
-        <Button x:Name="btn_Clear" Content="Очистить"   HorizontalAlignment="Left" Margin="705,45,0,0" VerticalAlignment="Top" Width="75" Click="btn_Clear_Click" Background="White"/>
-        <Button x:Name="btn_Select" Content="Выделить" HorizontalAlignment="Left" Margin="705,75,0,0" VerticalAlignment="Top" Width="75" Click="btn_Select_Click" Background="White"/>
-        <Button x:Name="btn_AddText" Content="Текст" HorizontalAlignment="Left" Margin="705,105,0,0" VerticalAlignment="Top" Width="75" Click="btn_AddText_Click" Background="White"/>
+            <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Left" Height="300" Width="500" Margin="70,45,0,0" VerticalAlignment="Top" />
 
-        <Slider x:Name="sld_RedColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
-        <Slider x:Name="sld_GreenColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="60,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
-        <Slider x:Name="sld_BlueColor"  Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="90,70,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="250"/>
+            <Rectangle Fill="#FFC8C8C8" Width="185" Height="85" RadiusX="5" RadiusY="5" Margin="595.5,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="button1" HorizontalAlignment="Left" Margin="605,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\black.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button2" HorizontalAlignment="Left" Margin="650,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\brown.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button3" HorizontalAlignment="Left" Margin="695,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\white.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button4" HorizontalAlignment="Left" Margin="740,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\red.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button5" HorizontalAlignment="Left" Margin="605,65,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\green.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button6" HorizontalAlignment="Left" Margin="650,65,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\pink.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button7" HorizontalAlignment="Left" Margin="695,65,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\blue.png" HorizontalAlignment="Right" />
+            </Button>
+            <Button x:Name="button8" HorizontalAlignment="Left" Margin="740,65,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\yellow.png" HorizontalAlignment="Right" />
+            </Button>
 
-        <Label x:Name="lbl1" HorizontalAlignment="Left" Margin="45,340,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+            <Slider x:Name="sld_RedColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="650,110,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="200"/>
+            <Slider x:Name="sld_GreenColor" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="680,110,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="200"/>
+            <Slider x:Name="sld_BlueColor"  Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="710,110,0,0" VerticalAlignment="Top" Width="25" ValueChanged="sld_Color_ValueChanged" Orientation="Vertical" Height="200"/>
 
-    </Grid>
+            <Label x:Name="lbl1" HorizontalAlignment="Left" Margin="665,325,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.Column="1"/>
+        </Grid>
+    </DockPanel>
 </Window>
