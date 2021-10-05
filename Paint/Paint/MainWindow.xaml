@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Paint"
         mc:Ignorable="d"
-        Title="Paint" Height="450" Width="800" Background="#FFB6B6B6">
+        Title="Paint" Height="450" Width="800" Background="#FF969696">
     <DockPanel>
         <Menu x:Name="menu1" DockPanel.Dock="Top" Background="White">
             <MenuItem Header="Файл">
@@ -22,7 +22,7 @@
             </MenuItem>
         </Menu>
         <Grid>
-            <Rectangle Fill="#FFC8C8C8" Width="36" Height="404" RadiusX="5" RadiusY="5" Margin="2,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Rectangle Fill="White" Width="36" Height="410" RadiusX="5" RadiusY="5" Margin="2,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
             <Button x:Name="button_pen2" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
                 <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\icons\pen-icon2.png" HorizontalAlignment="Left" />
             </Button>
@@ -38,7 +38,7 @@
 
             <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Left" Height="300" Width="500" Margin="70,45,0,0" VerticalAlignment="Top" />
 
-            <Rectangle Fill="#FFC8C8C8" Width="185" Height="85" RadiusX="5" RadiusY="5" Margin="595.5,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="White" Width="185" Height="85" RadiusX="5" RadiusY="5" Margin="595.5,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Button x:Name="button1" HorizontalAlignment="Left" Margin="605,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
                 <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\black.png" HorizontalAlignment="Right" />
             </Button>
@@ -46,7 +46,7 @@
                 <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\brown.png" HorizontalAlignment="Right" />
             </Button>
             <Button x:Name="button3" HorizontalAlignment="Left" Margin="695,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
-                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\white.png" HorizontalAlignment="Right" />
+                <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\purple.png" HorizontalAlignment="Right" />
             </Button>
             <Button x:Name="button4" HorizontalAlignment="Left" Margin="740,20,0,0" VerticalAlignment="Top" Width="30" Height="30" UseLayoutRounding="False" BorderBrush="{x:Null}" Background="{x:Null}">
                 <Image Source="C:\Users\Aillls\source\repos\Paint\Paint\Images\colors\red.png" HorizontalAlignment="Right" />
